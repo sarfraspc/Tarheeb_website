@@ -184,7 +184,115 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements that should animate
-    document.querySelectorAll('.service-card, .feature, .about-card, .team-member').forEach(element => {
+    document.querySelectorAll('.service-card, .feature, .about-card, .testimonial-card').forEach(element => {
         observer.observe(element);
+    });
+
+    // Counter animation for stats
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateCounter = () => {
+            current += step;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    };
+
+    // Initialize counters when they come into view
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    document.querySelectorAll('.counter').forEach(counter => {
+        statsObserver.observe(counter);
+    });
+
+    // Enhanced scroll animations
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('scrolled');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('scrolled');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    // Throttle scroll event
+    let throttleTimer;
+    const throttle = (callback, time) => {
+        if (throttleTimer) return;
+        throttleTimer = setTimeout(() => {
+            callback();
+            throttleTimer = null;
+        }, time);
+    };
+
+    window.addEventListener('scroll', () => {
+        throttle(handleScrollAnimation, 250);
+    });
+
+    // Initial check for elements in view
+    handleScrollAnimation();
+
+    // Add hover effect to trust items
+    document.querySelectorAll('.trust-item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-5px)';
+            item.style.boxShadow = 'var(--shadow-lg)';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0)';
+            item.style.boxShadow = 'var(--shadow-md)';
+        });
+    });
+
+    // Add smooth reveal animation to badges
+    document.querySelectorAll('.badge').forEach((badge, index) => {
+        badge.style.opacity = '0';
+        badge.style.transform = 'translateY(20px)';
+        badge.style.transition = 'all 0.5s ease';
+        badge.style.transitionDelay = `${index * 0.1}s`;
+
+        setTimeout(() => {
+            badge.style.opacity = '1';
+            badge.style.transform = 'translateY(0)';
+        }, 500);
     });
 }); 

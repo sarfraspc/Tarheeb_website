@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Business Services</title>
+    <title>Contact Us - Tarheeb Passport Services</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .contact-section {
             padding: 5rem 2rem;
-            background-color: #f8f9fa;
+            background-color: var(--light-gray);
         }
 
         .contact-container {
@@ -22,35 +22,77 @@
         }
 
         .contact-info {
-            background: #fff;
+            background: var(--primary-white);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
         }
 
         .contact-info h2 {
             margin-bottom: 1.5rem;
-            color: #333;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-info h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-red), var(--primary-green));
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-normal);
+        }
+
+        .info-item:hover {
+            background: var(--light-gray);
+            transform: translateX(5px);
         }
 
         .info-item i {
-            font-size: 1.2rem;
-            color: #007bff;
+            font-size: 1.5rem;
+            color: var(--primary-red);
             margin-right: 1rem;
-            width: 30px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-red);
+            border-radius: 50%;
+        }
+
+        .info-item:nth-child(even) i {
+            color: var(--primary-green);
+            background: var(--light-green);
+        }
+
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--text-dark);
+        }
+
+        .info-item p {
+            color: var(--text-light);
+            margin: 0;
         }
 
         .contact-form {
-            background: #fff;
+            background: var(--primary-white);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
         }
 
         .form-group {
@@ -60,7 +102,8 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: var(--text-dark);
+            font-weight: 500;
         }
 
         .form-group input,
@@ -69,8 +112,17 @@
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
+            border-radius: var(--border-radius-md);
+            font-family: var(--font-family);
+            transition: all var(--transition-normal);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 2px rgba(255,0,0,0.1);
+            outline: none;
         }
 
         .form-group textarea {
@@ -79,31 +131,65 @@
         }
 
         .submit-button {
-            background-color: #007bff;
-            color: #fff;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            color: var(--primary-white);
             padding: 1rem 2rem;
             border: none;
-            border-radius: 5px;
+            border-radius: var(--border-radius-lg);
             cursor: pointer;
             font-size: 1rem;
-            transition: background-color 0.3s ease;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
         }
 
         .submit-button:hover {
-            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-colored);
+        }
+
+        .submit-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .submit-button:hover:before {
+            left: 100%;
         }
 
         .map-container {
             margin-top: 3rem;
             height: 400px;
-            border-radius: 10px;
+            border-radius: var(--border-radius-lg);
             overflow: hidden;
+            box-shadow: var(--shadow-md);
         }
 
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        .error-message {
+            color: var(--primary-red);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .success-message {
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 1rem;
+            border-radius: var(--border-radius-md);
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -112,13 +198,13 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Business<span>247</span></a>
+                <a href="index.html">تَرْحِيب TARHEEB</a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#testimonials">Testimonials</a>
                 <a href="contact.html" class="active">Contact</a>
             </div>
             <div class="mobile-menu">
@@ -135,29 +221,38 @@
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h3>Address</h3>
-                        <p>Dubai, UAE</p>
+                        <h3>Office Address</h3>
+                        <p>Office 101, Business Center, Dubai, UAE</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
-                        <h3>Phone</h3>
-                        <p>+971 4 2300500</p>
+                        <h3>Phone Numbers</h3>
+                        <p>+971 4 123 4567</p>
+                        <p>+971 50 123 4567</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <h3>Email</h3>
-                        <p>info@business247.com</p>
+                        <h3>Email Address</h3>
+                        <p>info@tarheeb.ae</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
                     <div>
                         <h3>Working Hours</h3>
-                        <p>24/7 Service Available</p>
+                        <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+                        <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>+971 50 123 4567</p>
                     </div>
                 </div>
             </div>
@@ -184,10 +279,12 @@
                         <label for="service">Service Required</label>
                         <select id="service" name="service" required>
                             <option value="">Select a Service</option>
-                            <option value="visa">Visa Services</option>
-                            <option value="id">ID Services</option>
-                            <option value="residence">Residence Services</option>
-                            <option value="medical">Medical Services</option>
+                            <option value="passport">Passport Services</option>
+                            <option value="visa">Visa Processing</option>
+                            <option value="emirates-id">Emirates ID</option>
+                            <option value="residence">Residence Permit</option>
+                            <option value="attestation">Document Attestation</option>
+                            <option value="business">Business Visa</option>
                         </select>
                         <div class="error-message" id="serviceError"></div>
                     </div>
@@ -214,16 +311,27 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-envelope"></i> info@business247.com</p>
-                <p><i class="fas fa-phone"></i> +971 4 2300500</p>
-                <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                <p><i class="fas fa-envelope"></i> info@tarheeb.ae</p>
+                <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                <p><i class="fas fa-mobile-alt"></i> +971 50 123 4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Office 101, Business Center, Dubai, UAE</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#services">Passport Services</a>
+                <a href="#services">Visa Processing</a>
+                <a href="#services">Emirates ID</a>
+                <a href="#services">Document Attestation</a>
+                <a href="#services">Residence Permits</a>
+                <a href="#services">Business Visas</a>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
-                <a href="services.html">Services</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -232,30 +340,22 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Business247. All rights reserved.</p>
+            <p>&copy; 2024 Tarheeb. All rights reserved. | Licensed by Dubai Economic Department</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Here you would typically send the data to your server
-            console.log('Form submitted:', data);
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html> 

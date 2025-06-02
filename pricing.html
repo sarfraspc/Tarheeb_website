@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - Business Services</title>
+    <title>Pricing - Tarheeb Passport Services</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .pricing-section {
             padding: 5rem 2rem;
-            background-color: #f8f9fa;
+            background-color: var(--light-gray);
         }
 
         .pricing-header {
@@ -21,12 +21,27 @@
         .pricing-header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .pricing-header h1:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-red), var(--primary-green));
         }
 
         .pricing-header p {
-            color: #666;
+            color: var(--text-light);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 1.5rem auto 0;
+            line-height: 1.8;
         }
 
         .pricing-grid {
@@ -38,20 +53,23 @@
         }
 
         .pricing-card {
-            background: #fff;
-            border-radius: 10px;
+            background: var(--primary-white);
+            border-radius: var(--border-radius-lg);
             padding: 2rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-md);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
         }
 
         .pricing-card:hover {
             transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
         .pricing-card.popular {
-            border: 2px solid #007bff;
+            border: 2px solid var(--primary-red);
             position: relative;
         }
 
@@ -60,57 +78,136 @@
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: #007bff;
-            color: #fff;
-            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            color: var(--primary-white);
+            padding: 0.5rem 1.5rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-sm);
         }
 
         .pricing-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
         .price {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #007bff;
+            color: var(--primary-red);
             margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .price:before {
+            content: 'AED';
+            position: absolute;
+            top: -15px;
+            left: -30px;
+            font-size: 1rem;
+            color: var(--text-light);
         }
 
         .price span {
             font-size: 1rem;
-            color: #666;
+            color: var(--text-light);
+            font-weight: 400;
         }
 
         .features-list {
             list-style: none;
             margin-bottom: 2rem;
+            text-align: left;
         }
 
         .features-list li {
-            margin-bottom: 0.5rem;
-            color: #666;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
         }
 
         .features-list li i {
-            color: #007bff;
-            margin-right: 0.5rem;
+            color: var(--primary-green);
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list li.disabled {
+            color: var(--text-light);
+            opacity: 0.5;
+        }
+
+        .features-list li.disabled i {
+            color: var(--text-light);
         }
 
         .pricing-button {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background-color: #007bff;
-            color: #fff;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            color: var(--primary-white);
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: var(--border-radius-lg);
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
         }
 
         .pricing-button:hover {
-            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-colored);
+        }
+
+        .pricing-button:hover:before {
+            left: 100%;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .pricing-note a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .pricing-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-header h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .pricing-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -119,13 +216,13 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Business<span>247</span></a>
+                <a href="index.html">تَرْحِيب TARHEEB</a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="pricing.html" class="active">Pricing</a>
-                <a href="about.html">About</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#testimonials">Testimonials</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="mobile-menu">
@@ -137,42 +234,45 @@
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="pricing-header">
-            <h1>Our Pricing Plans</h1>
-            <p>Choose the perfect plan for your needs. All our plans come with 24/7 support and guaranteed satisfaction.</p>
+            <h1>Our Service Packages</h1>
+            <p>Choose the perfect package for your passport and visa needs. All our packages include professional guidance and support throughout the process.</p>
         </div>
         <div class="pricing-grid">
-            <!-- Basic Plan -->
+            <!-- Basic Package -->
             <div class="pricing-card">
-                <h3>Basic Plan</h3>
-                <div class="price">AED 299<span>/month</span></div>
+                <h3>Basic Package</h3>
+                <div class="price">299<span>/service</span></div>
                 <ul class="features-list">
-                    <li><i class="fas fa-check"></i> Visa Processing</li>
+                    <li><i class="fas fa-check"></i> Passport Renewal</li>
                     <li><i class="fas fa-check"></i> Basic Documentation</li>
                     <li><i class="fas fa-check"></i> Email Support</li>
                     <li><i class="fas fa-check"></i> 5 Working Days</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Priority Processing</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Document Collection</li>
                 </ul>
                 <a href="contact.html" class="pricing-button">Get Started</a>
             </div>
 
-            <!-- Popular Plan -->
+            <!-- Popular Package -->
             <div class="pricing-card popular">
                 <div class="popular-badge">Most Popular</div>
-                <h3>Professional Plan</h3>
-                <div class="price">AED 599<span>/month</span></div>
+                <h3>Professional Package</h3>
+                <div class="price">599<span>/service</span></div>
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> All Basic Features</li>
                     <li><i class="fas fa-check"></i> Priority Processing</li>
                     <li><i class="fas fa-check"></i> 24/7 Phone Support</li>
                     <li><i class="fas fa-check"></i> 3 Working Days</li>
                     <li><i class="fas fa-check"></i> Document Collection</li>
+                    <li><i class="fas fa-check"></i> Free Consultation</li>
                 </ul>
                 <a href="contact.html" class="pricing-button">Get Started</a>
             </div>
 
-            <!-- Premium Plan -->
+            <!-- Premium Package -->
             <div class="pricing-card">
-                <h3>Premium Plan</h3>
-                <div class="price">AED 999<span>/month</span></div>
+                <h3>Premium Package</h3>
+                <div class="price">999<span>/service</span></div>
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> All Professional Features</li>
                     <li><i class="fas fa-check"></i> VIP Processing</li>
@@ -184,6 +284,9 @@
                 <a href="contact.html" class="pricing-button">Get Started</a>
             </div>
         </div>
+        <div class="pricing-note">
+            <p>All prices are in AED and subject to change. For custom requirements, please <a href="contact.html">contact us</a> for a personalized quote.</p>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -191,16 +294,27 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-envelope"></i> info@business247.com</p>
-                <p><i class="fas fa-phone"></i> +971 4 2300500</p>
-                <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                <p><i class="fas fa-envelope"></i> info@tarheeb.ae</p>
+                <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                <p><i class="fas fa-mobile-alt"></i> +971 50 123 4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Office 101, Business Center, Dubai, UAE</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#services">Passport Services</a>
+                <a href="#services">Visa Processing</a>
+                <a href="#services">Emirates ID</a>
+                <a href="#services">Document Attestation</a>
+                <a href="#services">Residence Permits</a>
+                <a href="#services">Business Visas</a>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
-                <a href="services.html">Services</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -209,11 +323,19 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Business247. All rights reserved.</p>
+            <p>&copy; 2024 Tarheeb. All rights reserved. | Licensed by Dubai Economic Department</p>
         </div>
     </footer>
 
