@@ -46,6 +46,30 @@ nav {
     background-clip: text;
 }
 
+.logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 56px;
+  display: block;
+}
+.logo-text {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #ffd700, #ffed4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -391,8 +415,18 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+}
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
@@ -569,9 +603,30 @@ nav {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
     gap: 4rem;
+    min-height: 480px;
+}
+.contact-info {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 100%;
+    padding: 2rem 1.5rem;
+}
+.contact-form {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 100%;
+    padding: 2rem 1.5rem;
 }
 
 .contact-info h2 {
@@ -605,14 +660,6 @@ nav {
 
 .contact-details p {
     opacity: 0.9;
-}
-
-.contact-form {
-    background: rgba(255,255,255,0.1);
-    padding: 3rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .contact-form h3 {
@@ -870,7 +917,13 @@ footer {
     }
     
     .contact-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 2rem;
+        min-height: unset;
+    }
+    .contact-info, .contact-form {
+        min-height: unset;
+        padding: 1.2rem 0.5rem;
     }
     
     .about-stats {
@@ -892,4 +945,133 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+.about-image {
+    /* Ensure this container has a defined height so content can animate within it */
+    min-height: 400px; /* Adjust based on desired animation height */
+    position: relative; /* Essential for absolutely positioned animation elements */
+    overflow: hidden; /* Hide elements outside the canvas during animation */
+    background-color: #f8f9fa; /* A subtle background for the animation area */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex; /* Helps to center content if needed */
+    align-items: center;
+    justify-content: center;
+}
+
+/* About Section Animation */
+#tarheeb-animation-canvas {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(42, 82, 152, 0.10);
+  margin-bottom: 1.5rem;
+}
+.animation-stage {
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1;
+}
+.animation-stage.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+#tarheeb-animation-canvas svg {
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(42, 82, 152, 0.10));
+}
+/* Add color accents to SVGs in trust animation */
+#stage-trust-handshake svg path:first-child { stroke: #2a5298; }
+#stage-trust-handshake svg path:last-child { stroke: #44a08d; }
+#stage-trust-shield svg path:first-child { stroke: #2a5298; }
+#stage-trust-shield svg path:last-child { stroke: #ffd700; }
+#stage-trust-heart svg path { stroke: #ff6b6b; }
+#stage-trust-star svg polygon { stroke: #ffd700; fill: #fffbe6; }
+#stage-trust-group svg circle { stroke: #2a5298; fill: #e0e7ff; }
+#stage-trust-group svg ellipse { stroke: #44a08d; fill: #e0f7fa; }
+
+#tarheeb-animation-canvas .number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2a5298;
+  text-shadow: 0 2px 8px #fffbe6;
+}
+#tarheeb-animation-canvas h4 {
+  color: #2a5298;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px #fffbe6;
+}
+#tarheeb-animation-canvas p {
+  color: #222;
+  font-weight: 500;
+  text-shadow: 0 2px 8px #fffbe6;
+}
+#tarheeb-animation-canvas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 260px;
+}
+#tarheeb-animation-canvas li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+#tarheeb-animation-canvas li svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 900px) {
+  #tarheeb-animation-canvas { min-height: 180px; }
+}
+@media (max-width: 600px) {
+  #tarheeb-animation-canvas { min-height: 120px; }
+  #tarheeb-animation-canvas .number { font-size: 1.3rem; }
+  .logo-img {
+    height: 32px;
+    max-width: 38px;
+  }
+  .logo-text {
+    font-size: 1rem;
+  }
+  .logo-flex {
+    gap: 0.4rem;
+  }
+}
+#contactForm + div { /* Selects the div directly after the form */
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contactForm + div[style*="color: green"] {
+    background-color: #e6ffe6; /* Light green background */
+    border: 1px solid #00cc00; /* Green border */
+}
+
+#contactForm + div[style*="color: red"] {
+    background-color: #ffe6e6; /* Light red background */
+    border: 1px solid #cc0000; /* Red border */
 }
