@@ -230,3 +230,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Hamburger menu toggle
+const navToggle = document.getElementById('nav-toggle');
+const header = document.querySelector('header');
+if (navToggle && header) {
+    navToggle.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+    });
+}
