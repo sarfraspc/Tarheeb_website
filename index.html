@@ -15,8 +15,9 @@
         <nav class="container">
             <a href="#" class="logo">
                 <span class="logo-flex">
+                    <span class="logo-text-ar">ترحيب</span>
                     <img src="img/logo.png" alt="Tarheeb Logo" class="logo-img" />
-                    <span class="logo-text">تَرْحِيب TARHEEB</span>
+                    <span class="logo-text-en">TARHEEB</span>
                 </span>
             </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -109,27 +110,24 @@
                     </div>
                 </div>
                 
-                <div class="about-image"> 
-                    <div id="tarheeb-animation-canvas">
-                        <div class="animation-stage" id="stage-trust-handshake">
-                            <svg width="56" height="56" viewBox="0 0 56 56"><path d="M12 32l8 8c2 2 6 2 8 0l16-16" stroke="#2a5298" stroke-width="3" fill="none"/><path d="M44 20c2-2 2-6 0-8l-4-4c-2-2-6-2-8 0l-16 16" stroke="#2a5298" stroke-width="3" fill="none"/></svg>
-                            <p>Building Trust, Every Step</p>
-                        </div>
-                        <div class="animation-stage" id="stage-trust-shield">
-                            <svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 6l18 6v12c0 14-10 22-18 26-8-4-18-12-18-26V12z" stroke="#2a5298" stroke-width="3" fill="none"/><path d="M20 28l6 6 10-10" stroke="#ffd700" stroke-width="3" fill="none"/></svg>
-                            <p>Your Security, Our Priority</p>
-                        </div>
-                        <div class="animation-stage" id="stage-trust-heart">
-                            <svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 48s-16-10.7-16-22A8 8 0 0 1 28 16a8 8 0 0 1 16 10c0 11.3-16 22-16 22z" stroke="#2a5298" stroke-width="3" fill="none"/></svg>
-                            <p>Caring for Your Journey</p>
-                        </div>
-                        <div class="animation-stage" id="stage-trust-star">
-                            <svg width="56" height="56" viewBox="0 0 56 56"><polygon points="28,8 34,24 52,24 38,36 44,52 28,42 12,52 18,36 4,24 22,24" stroke="#2a5298" stroke-width="3" fill="none"/></svg>
-                            <p>Trusted by Thousands</p>
-                        </div>
-                        <div class="animation-stage" id="stage-trust-group">
-                            <svg width="56" height="56" viewBox="0 0 56 56"><circle cx="18" cy="28" r="8" stroke="#2a5298" stroke-width="3" fill="none"/><circle cx="38" cy="28" r="8" stroke="#2a5298" stroke-width="3" fill="none"/><ellipse cx="28" cy="40" rx="18" ry="8" stroke="#2a5298" stroke-width="3" fill="none"/></svg>
-                            <p>A Community You Can Rely On</p>
+                <div class="about-image full-fit"> 
+                    <div class="about-carousel-wrapper">
+                        <div class="about-carousel">
+                            <div class="about-carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Dubai Skyline">
+                            </div>
+                            <div class="about-carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Dubai Marina Night">
+                            </div>
+                            <div class="about-carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Palm Jumeirah">
+                            </div>
+                            <div class="about-carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Modern Office">
+                            </div>
+                            <div class="about-carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Business Team">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,45 +188,47 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=009966&color=fff" alt="Ali Khan">
-                        <div class="client-info">
-                            <h4>Ali Khan</h4>
-                            <p>Entrepreneur</p>
+            <div class="testimonials-carousel-wrapper" style="overflow:hidden; position:relative;">
+                <div class="testimonials-carousel" style="display:flex; transition: transform 0.7s cubic-bezier(.77,0,.18,1); will-change:transform;">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=009966&color=fff" alt="Ali Khan">
+                            <div class="client-info">
+                                <h4>Ali Khan</h4>
+                                <p>Entrepreneur</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Tarheeb made my company setup process seamless and stress-free. Highly recommended!"</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Fatima+Zahra&background=FFD700&color=222831" alt="Fatima Zahra">
-                        <div class="client-info">
-                            <h4>Fatima Zahra</h4>
-                            <p>HR Manager</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
+                        <p>"Tarheeb made my company setup process seamless and stress-free. Highly recommended!"</p>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p>"Professional, fast, and reliable service. Tarheeb is my go-to for all document needs."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Omar+Saeed&background=222831&color=FFD700" alt="Omar Saeed">
-                        <div class="client-info">
-                            <h4>Omar Saeed</h4>
-                            <p>Investor</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://ui-avatars.com/api/?name=Fatima+Zahra&background=FFD700&color=222831" alt="Fatima Zahra">
+                            <div class="client-info">
+                                <h4>Fatima Zahra</h4>
+                                <p>HR Manager</p>
+                            </div>
                         </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Professional, fast, and reliable service. Tarheeb is my go-to for all document needs."</p>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://ui-avatars.com/api/?name=Omar+Saeed&background=222831&color=FFD700" alt="Omar Saeed">
+                            <div class="client-info">
+                                <h4>Omar Saeed</h4>
+                                <p>Investor</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Their team handled my investor visa quickly and efficiently. Excellent customer support!"</p>
                     </div>
-                    <p>"Their team handled my investor visa quickly and efficiently. Excellent customer support!"</p>
                 </div>
             </div>
         </div>
@@ -237,7 +237,7 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title" style="color: #2a5298;">Our Pricing Plans</h2>
+            <h2 class="section-title" >Our Pricing Plans</h2>
             <div class="pricing-grid">
                 <div class="pricing-card fade-in">
                     <div class="pricing-header">
@@ -445,6 +445,136 @@
     current = (current + 1) % stages.length;
     showStage(current);
   }, 2200);
+})();
+
+// Testimonials carousel auto-slide (smooth, flowing, pause on hover)
+(function() {
+  const carousel = document.querySelector('.testimonials-carousel');
+  const wrapper = document.querySelector('.testimonials-carousel-wrapper');
+  const cards = Array.from(document.querySelectorAll('.testimonials-carousel .testimonial-card'));
+  if (!carousel || cards.length < 2) return;
+  const total = cards.length;
+
+  // Duplicate first card at the end for seamless looping
+  const firstClone = cards[0].cloneNode(true);
+  carousel.appendChild(firstClone);
+  const allCards = Array.from(carousel.children);
+
+  let current = 0;
+  let width = 0;
+  let intervalId = null;
+  let isTransitioning = false;
+
+  function setCardWidths() {
+    width = wrapper.offsetWidth / 2;
+    allCards.forEach(card => {
+      card.style.minWidth = width + 'px';
+      card.style.maxWidth = width + 'px';
+    });
+    updateCarousel(false); // No transition on resize
+  }
+
+  function updateCarousel(transition = true) {
+    if (transition) {
+      carousel.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
+    } else {
+      carousel.style.transition = 'none';
+    }
+    carousel.style.transform = `translateX(-${current * width}px)`;
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    current++;
+    updateCarousel(true);
+    // If at the last (clone), reset to real first after transition
+    if (current === total) {
+      setTimeout(() => {
+        carousel.style.transition = 'none';
+        current = 0;
+        updateCarousel(false);
+        isTransitioning = false;
+      }, 700);
+    } else {
+      setTimeout(() => { isTransitioning = false; }, 700);
+    }
+  }
+
+  function startAutoSlide() {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 3500);
+  }
+  function stopAutoSlide() {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  // Pause on hover
+  wrapper.addEventListener('mouseenter', stopAutoSlide);
+  wrapper.addEventListener('mouseleave', startAutoSlide);
+
+  setCardWidths();
+  window.addEventListener('resize', setCardWidths);
+  startAutoSlide();
+
+  // Initial position
+  updateCarousel(false);
+})();
+
+// About section image carousel
+(function() {
+  const wrapper = document.querySelector('.about-carousel-wrapper');
+  const carousel = document.querySelector('.about-carousel');
+  const slides = document.querySelectorAll('.about-carousel-slide');
+  if (!carousel || slides.length < 2) return;
+  let current = 0;
+  let width = 0;
+  let intervalId = null;
+  let isTransitioning = false;
+
+  function setSlideWidths() {
+    width = wrapper.offsetWidth;
+    slides.forEach(slide => {
+      slide.style.minWidth = width + 'px';
+      slide.style.maxWidth = width + 'px';
+    });
+    updateCarousel(false);
+  }
+
+  function updateCarousel(transition = true) {
+    if (transition) {
+      carousel.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
+    } else {
+      carousel.style.transition = 'none';
+    }
+    carousel.style.transform = `translateX(-${current * width}px)`;
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    current = (current + 1) % slides.length;
+    updateCarousel(true);
+    setTimeout(() => { isTransitioning = false; }, 700);
+  }
+
+  function startAutoSlide() {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 3500);
+  }
+  function stopAutoSlide() {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  wrapper.addEventListener('mouseenter', stopAutoSlide);
+  wrapper.addEventListener('mouseleave', startAutoSlide);
+
+  setSlideWidths();
+  window.addEventListener('resize', setSlideWidths);
+  startAutoSlide();
+  updateCarousel(false);
 })();
 </script>
 <script>
