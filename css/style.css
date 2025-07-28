@@ -1,14 +1,14 @@
 /* Dark Theme Variables */
 :root {
-    --primary-green: #059669; /* Darker, more professional green */
-    --secondary-green: #10b981; /* Softer secondary green */
-    --dark-green: #047857;
-    --light-green: #34d399;
-    --accent-green: #059669;
-    --primary-red: #dc2626; /* Keep existing red */
-    --secondary-red: #ef4444;
-    --dark-red: #b91c1c;
-    --light-red: #f87171;
+    --primary-green: #1a365d; /* Deep professional blue */
+    --secondary-green: #2c5282; /* Medium blue */
+    --dark-green: #1a202c;
+    --light-green: #bee3f8;
+    --accent-green: #3182ce;
+    --primary-red: #d69e2e; /* Professional gold */
+    --secondary-red: #f6e05e;
+    --dark-red: #b7791f;
+    --light-red: #faf089;
     --background-slate: #ffffff;
     --background-slate-100: #f8fafc;
     --background-slate-200: #f1f5f9;
@@ -2277,4 +2277,160 @@ footer {
     box-shadow: 
         0 8px 16px rgba(5, 150, 105, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+/* Add these new classes to your CSS */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.floating-animation {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Enhanced hover effects for cards */
+.service-card, .pricing-card, .testimonial-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before, .pricing-card::before, .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.service-card:hover::before, .pricing-card:hover::before, .testimonial-card:hover::before {
+    left: 100%;
+}
+/* Add subtle background patterns */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(26, 54, 93, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(214, 158, 46, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Enhanced section backgrounds */
+.home {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.about, .pricing, .testimonials {
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+}
+/* Custom cursor */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+}
+
+.cursor-dot {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-green);
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.cursor-hover .cursor-dot {
+    transform: scale(2);
+    background: var(--primary-red);
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-red));
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Enhanced button animations */
+.cta-button, .pricing-button, .submit-btn {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.cta-button::after, .pricing-button::after, .submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::after, .pricing-button:hover::after, .submit-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+/* Smooth reveal animations */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+/* Enhanced typography */
+h1, h2, h3, .section-title {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+/* Add subtle text shadows for better readability */
+p, .service-description, .contact-details p {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced form styling */
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+    border-color: var(--primary-green);
+    transform: translateY(-2px);
 }
