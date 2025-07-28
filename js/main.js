@@ -239,3 +239,31 @@ if (navToggle && header) {
         header.classList.toggle('nav-open');
     });
 }
+// Add interactive cursor effect
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    cursor.innerHTML = '<div class="cursor-dot"></div>';
+    document.body.appendChild(cursor);
+    
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+    
+    // Add hover effects for interactive elements
+    document.querySelectorAll('a, button, .service-card, .pricing-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    });
+});
+
+// Add scroll progress indicator
+const scrollProgress = document.createElement('div');
+scrollProgress.className = 'scroll-progress';
+document.body.appendChild(scrollProgress);
+
+window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    scrollProgress.style.width = scrolled + '%';
+});
