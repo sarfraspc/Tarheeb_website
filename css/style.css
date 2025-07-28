@@ -1,11 +1,11 @@
 /* Dark Theme Variables */
 :root {
-    --primary-green: #5aa876;
-    --secondary-green: #16a34a;
-    --dark-green: #15803d;
-    --light-green: #4ade80;
-    --accent-green: #10b981;
-    --primary-red: #dc2626;
+    --primary-green: #059669; /* Darker, more professional green */
+    --secondary-green: #10b981; /* Softer secondary green */
+    --dark-green: #047857;
+    --light-green: #34d399;
+    --accent-green: #059669;
+    --primary-red: #dc2626; /* Keep existing red */
     --secondary-red: #ef4444;
     --dark-red: #b91c1c;
     --light-red: #f87171;
@@ -13,13 +13,13 @@
     --background-slate-100: #f8fafc;
     --background-slate-200: #f1f5f9;
     --background-slate-300: #e2e8f0;
-    --text-dark: #18181b;
-    --text-gray: #334155;
-    --text-light: #64748b;
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(34, 197, 94, 0.08);
-    --green-shadow: rgba(34, 197, 94, 0.08);
-    --red-shadow: rgba(220, 38, 38, 0.08);
+    --text-dark: #1f2937; /* Darker text for better contrast */
+    --text-gray: #374151; /* Darker gray for better readability */
+    --text-light: #6b7280;
+    --glass-bg: rgba(255, 255, 255, 0.9); /* More opaque for better visibility */
+    --glass-border: rgba(5, 150, 105, 0.1); /* Updated to match new green */
+    --green-shadow: rgba(5, 150, 105, 0.15); /* Updated shadow */
+    --red-shadow: rgba(220, 38, 38, 0.15);
     --font-family: 'Montserrat', 'Lato', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --section-bg: #ffffff;
 }
@@ -48,15 +48,15 @@ body {
 
 /* Header with Green-Red-Black Theme */
 header {
-    background: rgba(255,255,255,0.85) !important;
+    background: rgba(255,255,255,0.95) !important;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
-    border-bottom: 1.5px solid #e2e8f0;
+    border-bottom: 1px solid #e5e7eb;
     transition: all 0.3s ease;
 }
 header.scrolled {
@@ -109,21 +109,21 @@ nav {
 }
 .nav-links a {
     color: var(--text-gray) !important;
+    font-weight: 600; /* Slightly bolder */
+    padding: 0.75rem 1.25rem;
     text-decoration: none;
-    font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
-    padding: 0.5rem 1rem;
     border-radius: 12px;
     background: transparent !important;
 }
 .nav-links a:hover {
-    background: #f1f5f9 !important;
-    backdrop-filter: none;
-    border: 1px solid #e2e8f0 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.08);
+    background: #f3f4f6 !important;
     color: var(--primary-green) !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.1);
+    backdrop-filter: none;
+    transform: translateY(-2px);
 }
 .nav-links a:nth-child(even):hover {
     background: #fef2f2 !important;
@@ -222,9 +222,8 @@ nav {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.03) 0%, transparent 70%);
+        radial-gradient(circle at 30% 20%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(220, 38, 38, 0.03) 0%, transparent 50%);
     animation: float 30s ease-in-out infinite;
 }
 
@@ -600,17 +599,17 @@ nav {
 
 .cta-button {
     background: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+    border-radius: 8px; /* Less rounded for professional look */
     color: white;
     padding: 1.2rem 2.5rem;
     border: none;
-    border-radius: 15px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    box-shadow: 0 8px 25px var(--green-shadow);
     position: relative;
     overflow: hidden;
 }
@@ -632,21 +631,22 @@ nav {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px var(--green-shadow), 0 6px 20px var(--red-shadow);
-    background: var(--secondary-green);
+    background: var(--dark-green);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
 }
 
 .cta-button.secondary {
-    background: var(--glass-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid transparent;
-    color: var(--text-dark);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
 }
 
 .cta-button.secondary:hover {
-    background: rgba(220, 38, 38, 0.1);
     border-color: transparent;
     box-shadow: 0 8px 25px var(--red-shadow);
+    background: var(--primary-green);
+    color: white;
 }
 
 /* Trust Indicators with Red Accents */
@@ -927,6 +927,18 @@ nav {
 }
 .service-card:nth-child(even) .service-price {
     color: var(--primary-red);
+}
+/* Cards - Professional Styling */
+.service-card, .pricing-card, .testimonial-card, .about-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+.service-card:hover, .pricing-card:hover, .testimonial-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: var(--primary-green);
 }
 
 /* Pricing Section with Red Accents */
@@ -2005,3 +2017,264 @@ footer::before {
 /* Remove keyframes for orbFloat, pulse, and any glow-related animation */
 @keyframes orbFloat {}
 @keyframes pulse {}
+
+/* Section Backgrounds - Subtle Alternating */
+.about, .pricing, .testimonials {
+    background: #fafafa;
+}
+
+.services, .contact {
+    background: #ffffff;
+}
+
+/* Remove Excessive Animations and Gradients */
+.about::before, .services::before, .pricing::before, .contact::before, .testimonials::before {
+    background: none;
+}
+/* Form Styling */
+.form-group input, .form-group textarea, .form-group select {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Contact Items */
+.contact-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Reduce Floating Elements Opacity */
+.shape {
+    opacity: 0.03;
+}
+
+.float-element {
+    opacity: 0.5;
+}
+
+.particle {
+    opacity: 0.6;
+}
+
+/* 3D Text Effects */
+.home h1, .section-title, .about-text h2, .contact-info h2 {
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        2px 2px 0px rgba(5, 150, 105, 0.3),
+        4px 4px 0px rgba(5, 150, 105, 0.2),
+        6px 6px 0px rgba(5, 150, 105, 0.1),
+        8px 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.home h1 span {
+    background: linear-gradient(145deg, var(--primary-red), var(--secondary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        2px 2px 0px rgba(220, 38, 38, 0.3),
+        4px 4px 0px rgba(220, 38, 38, 0.2),
+        6px 6px 0px rgba(220, 38, 38, 0.1),
+        8px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Button Effects */
+.cta-button, .pricing-button, .submit-btn {
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green));
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 16px rgba(5, 150, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button::before, .pricing-button::before, .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, 
+        rgba(255, 255, 255, 0.2) 0%, 
+        transparent 50%, 
+        rgba(0, 0, 0, 0.1) 100%);
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.cta-button:hover, .pricing-button:hover, .submit-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 30px rgba(5, 150, 105, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active, .pricing-button:active, .submit-btn:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 
+        0 5px 15px rgba(5, 150, 105, 0.3),
+        inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Card Effects */
+.service-card, .pricing-card, .testimonial-card, .about-card {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border: 1px solid rgba(5, 150, 105, 0.1);
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card::before, .pricing-card::before, .testimonial-card::before, .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-red));
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+}
+
+.service-card:hover, .pricing-card:hover, .testimonial-card:hover, .about-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(5, 150, 105, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 3D Navigation */
+.nav-links a {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+    border: 1px solid rgba(5, 150, 105, 0.1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green)) !important;
+    color: white !important;
+    box-shadow: 
+        0 8px 16px rgba(5, 150, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: transparent !important;
+}
+
+/* 3D Form Inputs */
+.form-group input, .form-group textarea, .form-group select {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border: 2px solid rgba(5, 150, 105, 0.1);
+    border-radius: 12px;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 0 0 4px rgba(5, 150, 105, 0.1),
+        0 4px 12px rgba(5, 150, 105, 0.15);
+    transform: translateY(-1px);
+}
+
+/* 3D Icons */
+.service-icon, .contact-icon {
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 4px rgba(5, 150, 105, 0.3));
+    position: relative;
+}
+
+.service-card:nth-child(even) .service-icon,
+.contact-item:nth-child(even) .contact-icon {
+    background: linear-gradient(145deg, var(--primary-red), var(--secondary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 4px rgba(220, 38, 38, 0.3));
+}
+
+/* 3D Numbers and Stats */
+.trust-number, .stat-number, .pricing-price {
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        2px 2px 0px rgba(5, 150, 105, 0.2),
+        4px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.trust-item:nth-child(even) .trust-number,
+.pricing-card:nth-child(even) .pricing-price {
+    background: linear-gradient(145deg, var(--primary-red), var(--secondary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        2px 2px 0px rgba(220, 38, 38, 0.2),
+        4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 3D Footer Social Icons */
+.footer-social a {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border: 1px solid rgba(5, 150, 105, 0.1);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: linear-gradient(145deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    box-shadow: 
+        0 8px 16px rgba(5, 150, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
