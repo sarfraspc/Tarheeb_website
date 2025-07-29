@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Lottie Web Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
 </head>
 <body>
     <header id="header">
@@ -35,53 +36,32 @@
         </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="rotating-ring"></div>
-        <div class="morphing-shape"></div>
-        <div class="liquid-blob"></div>
-        
-        <div class="geometric-pattern">
-            <div class="geo-element"></div>
-            <div class="geo-element"></div>
-            <div class="geo-element"></div>
-            <div class="geo-element"></div>
-        </div>
-
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        
-        <div class="dubai-skyline"></div>
-        
-        <div class="floating-elements">
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-        </div>
-
-        <div class="particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-
-        <div class="container">
-            <div class="home-content">
-                <h1>Your Trusted <span>Business Setup/ Company</span> Formation…</h1>
-                <p class="subtitle">25+ Years of Excellence in Passport & Visa Services with 100% Success Rate</p>
-                <div class="home-buttons">
-                    <a href="#services" class="cta-button">Our Services</a>
-                    <a href="#contact" class="cta-button secondary">Get Started</a>
-                </div>
+<!-- Premium Home Section HTML -->
+<section class="home" id="home">
+    <!-- Premium UAE Night Video Background -->
+    <video autoplay muted loop playsinline class="premium-video-bg">
+        <source src="img/home_section.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+        <div class="video-fallback"></div>
+    </video>
+    
+    <!-- Premium Overlay -->
+    <div class="premium-overlay"></div>
+    
+    <div class="container">
+        <div class="home-content">
+            <h1>Start Your <span>Business</span> with Confidence and Clarity</h1>
+            <p class="subtitle">25+ Years of Excellence in Passport & Visa Services with 100% Success Rate</p>
+            
+            <div class="home-buttons">
+                <a href="#services" class="cta-button primary">Our Services</a>
+                <a href="#contact" class="cta-button secondary">Get Started</a>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section class="about" id="about">
         <div class="container">
@@ -143,47 +123,42 @@
         <div class="container">
             <h2 class="section-title">Our Premium Services</h2>
             <div class="services-grid">
-                <div class="service-card fade-in reveal-up stagger-1">
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-building"></i></div>
                     <h3 class="service-title">Company Formation</h3>
                     <p class="service-description">Expert assistance in setting up your business in the UAE, from choosing the right structure to full registration support.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-2">
-
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-certificate"></i></div>
                     <h3 class="service-title">Trade License</h3>
                     <p class="service-description">Comprehensive trade license services for all business types, ensuring compliance and fast approvals.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-2">
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-user-tie"></i></div>
                     <h3 class="service-title">Employment Visa</h3>
                     <p class="service-description">Seamless employment visa processing for companies and professionals, including renewals and new applications.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-3">
-
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-users"></i></div>
                     <h3 class="service-title">Family Visa</h3>
                     <p class="service-description">Family visa services to help you bring your loved ones to the UAE with ease and peace of mind.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-4">
-
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-user-shield"></i></div>
                     <h3 class="service-title">Investor Visa</h3>
                     <p class="service-description">Investor visa solutions for entrepreneurs and business owners seeking long-term residency in the UAE.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-5">
-
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-medal"></i></div>
                     <h3 class="service-title">Golden Visa</h3>
                     <p class="service-description">Premium Golden Visa services for eligible investors, professionals, and talents, offering long-term residency.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-6">
-
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-briefcase"></i></div>
                     <h3 class="service-title">Tasheel & Labor Services</h3>
                     <p class="service-description">All Tasheel and labor-related services, including work permits, contracts, and government transactions.</p>
                 </div>
-                <div class="service-card fade-in reveal-up stagger-7">
+                <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-language"></i></div>
                     <h3 class="service-title">Attestation & Translation</h3>
                     <p class="service-description">Certified document attestation and professional translation services for all your legal and business needs.</p>
@@ -431,9 +406,9 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
+    <footer >
+        <div  class="container">
+            <div  class="footer-content">
                 <div class="footer-section">
                     <h3>About Tarheeb</h3>
                     <p>Dubai's most trusted passport and visa service provider with over 25 years of excellence. We ensure 100% success rate with transparent processes and exceptional customer service.</p>
