@@ -3,337 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TARHEEB –Business Setup in Uae</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome CDN for star icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Lottie Web Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+    <title>TARHEEB – Premium Business Setup in UAE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+   
 </head>
 <body>
+<!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+        </div>
+        <div class="loading-text">TARHEEB</div>
+    </div>
+    
+    <!-- Header -->
     <header id="header">
-        <nav class="container">
+        <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-flex">
-                    <span class="logo-text-ar" style="font-family: 'GE SS TV', 'GE SS Two', Arial, sans-serif;">ترحيب</span>
-                    <img src="img/logo.png" alt="Tarheeb Logo" class="logo-img" />
-                    <span style="font-family: 'ITC Symbol'; font-weight: bold;" class="logo-text-en">TARHEEB</span>
-                </span>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="img/logo1.png" alt="TARHEEB Logo">
+                </div>
             </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-<!-- Premium Home Section HTML -->
-<section class="home" id="home">
-    <!-- Premium UAE Night Video Background -->
-    <video autoplay muted loop playsinline class="premium-video-bg">
-        <source src="img/home_section.mp4" type="video/mp4">
-        <!-- Fallback for browsers that don't support video -->
-        <div class="video-fallback"></div>
-    </video>
-    
-    <!-- Premium Overlay -->
-    <div class="premium-overlay"></div>
-    
-    <div class="container">
-        <div class="home-content">
-            <h1>Start Your <span>Business</span> with Confidence and Clarity</h1>
-            <p class="subtitle">25+ Years of Excellence in Passport & Visa Services with 100% Success Rate</p>
-            
-            <div class="home-buttons">
-                <a href="#services" class="cta-button primary">Our Services</a>
-                <a href="#contact" class="cta-button secondary">Get Started</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="about" id="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Tarheeb</h2>
-                <div style="position: relative;">
-                    <span style="position: absolute; left: -30px; top: 0; width: 7px; background-color: black; z-index: -1; height: calc(100% + 20px);"></span>
-                    <p style="margin: 0 0 20px 0;">With over 25+ years of excellence in passport and visa services, Tarheeb has established
-                        itself as Dubai's most trusted partner for immigration and documentation needs.</p>
-                    <p style="margin: 0;">Our team of licensed professionals specializes in all types of visa processing, passport
-                        services, and document attestation, ensuring a smooth and efficient process with complete
-                        transparency and guaranteed results.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">5000+</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Success Rate</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            
-            <div class="about-image full-fit"> 
-                <div class="about-carousel-wrapper">
-                    <div class="about-carousel">
-                        <div class="about-carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="5000+ Happy Clients Celebrating Success">
-                        </div>
-                        <div class="about-carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" alt="100% Success Rate Achievement">
-                        </div>
-                        <div class="about-carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=800&q=80" alt="24/7 Customer Support Service">
-                        </div>
-                        <div class="about-carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="12+ Years Experience in Visa Services">
-                        </div>
-                        <div class="about-carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=800&q=80" alt="Professional Passport and Visa Processing">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="img/home_section_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
         <div class="container">
-            <h2 class="section-title">Our Premium Services</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
-                    <h3 class="service-title">Company Formation</h3>
-                    <p class="service-description">Expert assistance in setting up your business in the UAE, from choosing the right structure to full registration support.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-certificate"></i></div>
-                    <h3 class="service-title">Trade License</h3>
-                    <p class="service-description">Comprehensive trade license services for all business types, ensuring compliance and fast approvals.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3 class="service-title">Employment Visa</h3>
-                    <p class="service-description">Seamless employment visa processing for companies and professionals, including renewals and new applications.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-users"></i></div>
-                    <h3 class="service-title">Family Visa</h3>
-                    <p class="service-description">Family visa services to help you bring your loved ones to the UAE with ease and peace of mind.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
-                    <h3 class="service-title">Investor Visa</h3>
-                    <p class="service-description">Investor visa solutions for entrepreneurs and business owners seeking long-term residency in the UAE.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-medal"></i></div>
-                    <h3 class="service-title">Golden Visa</h3>
-                    <p class="service-description">Premium Golden Visa services for eligible investors, professionals, and talents, offering long-term residency.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3 class="service-title">Tasheel & Labor Services</h3>
-                    <p class="service-description">All Tasheel and labor-related services, including work permits, contracts, and government transactions.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-language"></i></div>
-                    <h3 class="service-title">Attestation & Translation</h3>
-                    <p class="service-description">Certified document attestation and professional translation services for all your legal and business needs.</p>
+            <div class="hero-content">
+                <h1>Start Your Business in UAE with Confidence</h1>
+                <p>25+ Years of Excellence in Business Setup Services with 100% Success Rate</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- checking -->
-<!-- Clients/Testimonials Section -->
-<section id="testimonials" class="testimonials">
-    <div class="container">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="testimonials-carousel-wrapper">
-            <div class="testimonials-carousel">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=009966&color=fff" alt="Ali Khan">
-                        <div class="client-info">
-                            <h4>Ali Khan</h4>
-                            <p>Entrepreneur</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <div class="carousel-slide active">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Setup">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Visa Processing">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Professional Team">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Premium Services">
                         </div>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
                     </div>
-                    <p>"Tarheeb made my company setup process seamless and stress-free. Highly recommended!"</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Fatima+Zahra&background=FFD700&color=222831" alt="Fatima Zahra">
-                        <div class="client-info">
-                            <h4>Fatima Zahra</h4>
-                            <p>HR Manager</p>
+                
+                <div class="about-content">
+                    <h2>About <span>Tarheeb</span></h2>
+                    <p>With over 25 years of excellence, Tarheeb has established itself as UAE most trusted partner for comprehensive immigration and documentation solutions. Our team of licensed professionals offers specialized expertise across a wide array of services, including company formation, trade licenses, and all types of visa processing—encompassing employment, family, investor, and Golden Visas. We also provide essential Tasheel & Labor Services, along with efficient attestation and translation for critical documents.</p>
+                    <p>At Tarheeb, we are dedicated to ensuring a seamless and efficient experience for all our clients. We prioritize complete transparency throughout every process, from visa applications to passport services and document attestation. Our commitment to professional excellence and guaranteed results has made us the preferred choice for individuals and businesses navigating UAE regulatory landscape.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-text">Happy Clients</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-text">Success Rate</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-text">Support</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-text">Years Experience</div>
                         </div>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p>"Professional, fast, and reliable service. Tarheeb is my go-to for all document needs."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Omar+Saeed&background=222831&color=FFD700" alt="Omar Saeed">
-                        <div class="client-info">
-                            <h4>Omar Saeed</h4>
-                            <p>Investor</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Their team handled my investor visa quickly and efficiently. Excellent customer support!"</p>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=009966&color=fff" alt="Ali Khan">
-                        <div class="client-info">
-                            <h4>Ali Khan</h4>
-                            <p>Entrepreneur</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Tarheeb made my company setup process seamless and stress-free. Highly recommended!"</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Fatima+Zahra&background=FFD700&color=222831" alt="Fatima Zahra">
-                        <div class="client-info">
-                            <h4>Fatima Zahra</h4>
-                            <p>HR Manager</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p>"Professional, fast, and reliable service. Tarheeb is my go-to for all document needs."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://ui-avatars.com/api/?name=Omar+Saeed&background=222831&color=FFD700" alt="Omar Saeed">
-                        <div class="client-info">
-                            <h4>Omar Saeed</h4>
-                            <p>Investor</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Their team handled my investor visa quickly and efficiently. Excellent customer support!"</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        
+        <!-- Floating decorative elements -->
+        <div class="floating shape-1"></div>
+        <div class="floating shape-2"></div>
+        <div class="floating shape-3"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Services</h2>
+                <p>Comprehensive solutions for your business setup and visa needs in UAE</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Company Formation</h3>
+                    <p>Expert assistance in setting up your business in the UAE, from choosing the right structure to full registration support.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Trade License</h3>
+                    <p>Comprehensive trade license services for all business types, ensuring compliance and fast approvals.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Employment Visa</h3>
+                    <p>Seamless employment visa processing for companies and professionals, including renewals and new applications.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Visa</h3>
+                    <p>Family visa services to help you bring your loved ones to the UAE with ease and peace of mind.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Investor Visa</h3>
+                    <p>Investor visa solutions for entrepreneurs and business owners seeking long-term residency in the UAE.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Golden Visa</h3>
+                    <p>Premium Golden Visa services for eligible investors, professionals, and talents, offering long-term residency.</p>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container testimonials-container">
+            <div class="section-header light">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by businesses and individuals across the UAE</p>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-slides">
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            Tarheeb made my company setup process seamless and stress-free. Their team was professional, responsive, and guided me through every step. Highly recommended!
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <div style="background: #c6a876; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">A</div>
+                            </div>
+                            <div class="client-name">Ahmed Al-Maktoum</div>
+                            <div class="client-position">Entrepreneur</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            Their team handled my investor visa quickly and efficiently. Excellent customer support and guidance throughout the entire process. Will definitely use their services again!
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <div style="background: #0a192f; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">F</div>
+                            </div>
+                            <div class="client-name">Fatima Zahra</div>
+                            <div class="client-position">Business Owner</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            The Golden Visa process was complex, but Tarheeb made it simple. Their expertise saved me time and money. Truly professional service from start to finish.
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <div style="background: #c6a876; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">O</div>
+                            </div>
+                            <div class="client-name">Omar Saeed</div>
+                            <div class="client-position">Investor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button class="testimonial-btn next-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="testimonial-dots">
+                    <span class="testimonial-dot active" data-index="0"></span>
+                    <span class="testimonial-dot" data-index="1"></span>
+                    <span class="testimonial-dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <h2>Get In Touch</h2>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-details">
-                            <div class="map-embed">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.3243798697263!2d55.4576292!3d25.393950299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f58376781ef29%3A0x172188b3f5fdda9!2sAl-Khor%20Towers%20-%20Al%20Rashidiya%201%20-%20Ajman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1753688966771!5m2!1sen!2sin" width="400" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                            <h4>Location</h4>
-                            <p>Ajman, Rashideya1, UAE<br>Near Alkhour Tower</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+971 56 664 5714<br>+971 55 468 9163</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>info@tarheeb.ae</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-details">
-                            <h4>Working Hours</h4>
-                            <p>Mon - Sat: 8:00 AM - 2:30 PM , 5:00 Pm – 9:30 Pm<br>Friday: 8:00 AM – 12:30 PM , 5 PM – 9:30 PM</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
-                        <div class="contact-details">
-                            <h4>Connect with us</h4>
-                            <p>
-                            <div class="footer-social">
-                                <a href="#" aria-label="Facebook" style="margin-right:10px;"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" aria-label="Twitter" style="margin-right:10px;"><i class="fab fa-twitter"></i></a>
-                                <a href="#" aria-label="Instagram" style="margin-right:10px;"><i class="fab fa-instagram"></i></a>
-                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            </p>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Ajman, Rashideya1, UAE<br>Near Alkhour Tower</p>
+                            </div>
                         </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+971 56 664 5714<br>+971 55 468 9163</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@tarheeb.ae</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Mon - Sat: 8:00 AM - 2:30 PM, 5:00 PM – 9:30 PM<br>Friday: 8:00 AM – 12:30 PM, 5 PM – 9:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="contact-form fade-in">
+                
+                <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="7f2821be-c561-4983-9f16-0d87b15f21d5"> 
-                    
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" id="email" placeholder="Enter your email" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="service">Service Required</label>
-                            <select id="service" name="service" required>
+                            <select id="service" required>
                                 <option value="">Select a service</option>
                                 <option value="company-formation">Company Formation</option>
                                 <option value="trade-license">Trade License</option>
@@ -345,10 +362,12 @@
                                 <option value="attestation-translation">Attestation & Translation</option>
                             </select>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your requirements" required></textarea>
+                            <textarea id="message" placeholder="Tell us about your requirements" required></textarea>
                         </div>
+                        
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
@@ -357,245 +376,55 @@
     </section>
 
     <!-- Footer -->
-<!-- Subtle wave-shaped SVG curve -->
-<svg width="100%" height="50" viewBox="0 0 1200 50" preserveAspectRatio="none" style="display: block; margin: 0; padding: 0;">
-    <path d="M0,50 Q300,10 600,25 T1200,50 L1200,50 L0,50 Z" fill="black"></path>
-</svg>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Tarheeb</h4>
+                    <p>UAE most trusted business service provider with over 25 years of excellence. We ensure 100% success rate with transparent processes and exceptional customer service.</p>
+                    <div class="logo" style="margin-top: 20px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="img/logo with background.jpg" alt="TARHEEB Logo" style="height: 60px;">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Company Formation</a></li>
+                        <li><a href="#services">Trade License</a></li>
+                        <li><a href="#services">Employment Visa</a></li>
+                        <li><a href="#services">Family Visa</a></li>
+                        <li><a href="#services">Investor Visa</a></li>
+                        <li><a href="#services">Golden Visa</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tarheeb. All rights reserved. | Business Setup in UAE</p>
+            </div>
+        </div>
+    </footer>
 
-<footer style="background-color: rgb(20, 19, 19); color: white; padding: 40px 0; margin-top: -1px;">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 style="color: white; margin-bottom: 15px;">About Tarheeb</h3>
-                <p style="color: white; line-height: 1.6;">Dubai's most trusted passport and visa service provider with over 25 years of excellence. We ensure 100% success rate with transparent processes and exceptional customer service.</p>
-            </div>
-            <div class="footer-section">
-                <h3 style="color: white; margin-bottom: 15px;">Quick Links</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 8px;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#about" style="color: white; text-decoration: none;">About Us</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#pricing" style="color: white; text-decoration: none;">Pricing</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 style="color: white; margin-bottom: 15px;">Services</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Company Formation</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Trade License</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Employment Visa</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Family Visa</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Investor Visa</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Golden Visa</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Tasheel & Labor Services</a></li>
-                    <li style="margin-bottom: 8px;"><a href="#services" style="color: white; text-decoration: none;">Attestation & Translation</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom" style="border-top: 1px solid #333; margin-top: 30px; padding-top: 20px; text-align: center;">
-            <p style="margin: 0; color: #ccc;">&copy; 2025 Tarheeb. All rights reserved. | Business Setup in Uae</p>
-        </div>
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
-</footer>
 
-    
     <script src="js/main.js"></script>
-    <script>
-// About section animation sequencing
-(function() {
-  const stages = document.querySelectorAll('#tarheeb-animation-canvas .animation-stage');
-  let current = 0;
-  function showStage(idx) {
-    stages.forEach((el, i) => el.classList.toggle('active', i === idx));
-  }
-  showStage(current);
-  setInterval(() => {
-    current = (current + 1) % stages.length;
-    showStage(current);
-  }, 2200);
-})();
-
-// Testimonials carousel auto-slide (smooth, flowing, pause on hover)
-(function() {
-  const carousel = document.querySelector('.testimonials-carousel');
-  const wrapper = document.querySelector('.testimonials-carousel-wrapper');
-  const cards = Array.from(document.querySelectorAll('.testimonials-carousel .testimonial-card'));
-  if (!carousel || cards.length < 2) return;
-  const total = cards.length;
-
-  // Duplicate first card at the end for seamless looping
-  const firstClone = cards[0].cloneNode(true);
-  carousel.appendChild(firstClone);
-  const allCards = Array.from(carousel.children);
-
-  let current = 0;
-  let width = 0;
-  let intervalId = null;
-  let isTransitioning = false;
-
-  function setCardWidths() {
-    width = wrapper.offsetWidth / 2;
-    allCards.forEach(card => {
-      card.style.minWidth = width + 'px';
-      card.style.maxWidth = width + 'px';
-    });
-    updateCarousel(false); // No transition on resize
-  }
-
-  function updateCarousel(transition = true) {
-    if (transition) {
-      carousel.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
-    } else {
-      carousel.style.transition = 'none';
-    }
-    carousel.style.transform = `translateX(-${current * width}px)`;
-  }
-
-  function nextSlide() {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    current++;
-    updateCarousel(true);
-    // If at the last (clone), reset to real first after transition
-    if (current === total) {
-      setTimeout(() => {
-        carousel.style.transition = 'none';
-        current = 0;
-        updateCarousel(false);
-        isTransitioning = false;
-      }, 700);
-    } else {
-      setTimeout(() => { isTransitioning = false; }, 700);
-    }
-  }
-
-  function startAutoSlide() {
-    if (intervalId) clearInterval(intervalId);
-    intervalId = setInterval(nextSlide, 3500);
-  }
-  function stopAutoSlide() {
-    if (intervalId) clearInterval(intervalId);
-    intervalId = null;
-  }
-
-  // Pause on hover
-  wrapper.addEventListener('mouseenter', stopAutoSlide);
-  wrapper.addEventListener('mouseleave', startAutoSlide);
-
-  setCardWidths();
-  window.addEventListener('resize', setCardWidths);
-  startAutoSlide();
-
-  // Initial position
-  updateCarousel(false);
-})();
-
-// About section image carousel
-(function() {
-  const wrapper = document.querySelector('.about-carousel-wrapper');
-  const carousel = document.querySelector('.about-carousel');
-  const slides = document.querySelectorAll('.about-carousel-slide');
-  if (!carousel || slides.length < 2) return;
-  let current = 0;
-  let width = 0;
-  let intervalId = null;
-  let isTransitioning = false;
-
-  function setSlideWidths() {
-    width = wrapper.offsetWidth;
-    slides.forEach(slide => {
-      slide.style.minWidth = width + 'px';
-      slide.style.maxWidth = width + 'px';
-    });
-    updateCarousel(false);
-  }
-
-  function updateCarousel(transition = true) {
-    if (transition) {
-      carousel.style.transition = 'transform 0.7s cubic-bezier(.77,0,.18,1)';
-    } else {
-      carousel.style.transition = 'none';
-    }
-    carousel.style.transform = `translateX(-${current * width}px)`;
-  }
-
-  function nextSlide() {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    current = (current + 1) % slides.length;
-    updateCarousel(true);
-    setTimeout(() => { isTransitioning = false; }, 700);
-  }
-
-  function startAutoSlide() {
-    if (intervalId) clearInterval(intervalId);
-    intervalId = setInterval(nextSlide, 3500);
-  }
-  function stopAutoSlide() {
-    if (intervalId) clearInterval(intervalId);
-    intervalId = null;
-  }
-
-  wrapper.addEventListener('mouseenter', stopAutoSlide);
-  wrapper.addEventListener('mouseleave', startAutoSlide);
-
-  setSlideWidths();
-  window.addEventListener('resize', setSlideWidths);
-  startAutoSlide();
-  updateCarousel(false);
-})();
-</script>
-<script>
-    const form = document.getElementById('contactForm');
-    const resultDiv = document.createElement('div'); // Create a div for messages
-
-    // Add a div to display messages (success/error)
-    // You might want to style this div with CSS for better appearance
-    form.parentNode.insertBefore(resultDiv, form.nextSibling); 
-
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent default form submission (page reload)
-
-        const formData = new FormData(form);
-        const object = {};
-        formData.forEach((value, key) => {
-            object[key] = value;
-        });
-        const json = JSON.stringify(object);
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: json
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                resultDiv.style.color = 'green';
-                resultDiv.textContent = "Message sent successfully!";
-                form.reset(); // Clear the form fields
-            } else {
-                resultDiv.style.color = 'red';
-                resultDiv.textContent = data.message || "Something went wrong. Please try again.";
-            }
-        } catch (error) {
-            resultDiv.style.color = 'red';
-            resultDiv.textContent = "An error occurred. Please check your network and try again.";
-            console.error('Error submitting form:', error);
-        } finally {
-            // Optional: Hide the message after a few seconds
-            setTimeout(() => {
-                resultDiv.textContent = '';
-            }, 5000); 
-        }
-    });
-</script>
-<!-- nothing -->
 </body>
 </html>
