@@ -16,7 +16,51 @@
                 header.classList.remove('scrolled');
             }
             
-            // Back to top button
+            // Counting animation
+    const statsSection = document.querySelector('.about-stats');
+    if (statsSection) {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200; // The lower the #, the faster the count
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace('+', '').replace('%', '');
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        if (counter.getAttribute('data-target') === '100') {
+                            counter.innerText = target + '%';
+                        } else if (counter.getAttribute('data-target') === '5000') {
+                            counter.innerText = target + '+';
+                        } else if (counter.getAttribute('data-target') === '25') {
+                            counter.innerText = target + '+';
+                        } else {
+                            counter.innerText = target;
+                        }
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+    }
+
+    // Back to top button
             const backToTop = document.getElementById('backToTop');
             if (window.scrollY > 500) {
                 backToTop.classList.add('visible');
@@ -58,13 +102,30 @@
             });
         });
         
-        // Back to top functionality
-        document.getElementById('backToTop').addEventListener('click', function() {
+        const floatingActionContainer = document.getElementById('floatingActionContainer');
+    const backToTopBtn = document.getElementById('backToTop');
+    const whatsappBtn = document.querySelector('.whatsapp-btn');
+
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                floatingActionContainer.querySelectorAll('.floating-btn').forEach(btn => {
+                    btn.classList.add('visible');
+                });
+            } else {
+                floatingActionContainer.querySelectorAll('.floating-btn').forEach(btn => {
+                    btn.classList.remove('visible');
+                });
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
+    }
         
         // Form submission
         const contactForm = document.getElementById('contactForm');
