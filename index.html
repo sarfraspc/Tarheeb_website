@@ -46,7 +46,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" id="heroVideo">
             <source src="img/home_section_1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -67,52 +67,89 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-container">
-                <div class="carousel-container">
-                    <div class="carousel-slides">
-                        <div class="carousel-slide active">
-                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Setup">
+                <div class="about-main-content">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide active">
+                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Setup">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Visa Processing">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Professional Team">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Premium Services">
+                            </div>
                         </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Visa Processing">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Professional Team">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Premium Services">
+                        
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active" data-index="0"></span>
+                            <span class="carousel-dot" data-index="1"></span>
+                            <span class="carousel-dot" data-index="2"></span>
+                            <span class="carousel-dot" data-index="3"></span>
                         </div>
                     </div>
                     
-                    <div class="carousel-dots">
-                        <span class="carousel-dot active" data-index="0"></span>
-                        <span class="carousel-dot" data-index="1"></span>
-                        <span class="carousel-dot" data-index="2"></span>
-                        <span class="carousel-dot" data-index="3"></span>
+                    <div class="about-content">
+                        <h2>About <span>Tarheeb</span></h2>
+                        <p>With over 25 years of excellence, Tarheeb has established itself as UAE's most trusted partner for comprehensive immigration and documentation solutions. Our team of licensed professionals offers specialized expertise across a wide array of services, including company formation, trade licenses, and all types of visa processing—encompassing employment, family, investor, and Golden Visas. We also provide essential Tasheel & Labor Services, along with efficient attestation and translation for critical documents.</p>
+                        <p>At Tarheeb, we are dedicated to ensuring a seamless and efficient experience for all our clients. We prioritize complete transparency throughout every process, from visa applications to document attestation and business setup services. Our commitment to professional excellence and guaranteed results has made us the preferred choice for individuals and businesses navigating UAE's regulatory landscape.</p>
                     </div>
                 </div>
                 
-                <div class="about-content">
-                    <h2>About <span>Tarheeb</span></h2>
-                    <p>With over 25 years of excellence, Tarheeb has established itself as UAE most trusted partner for comprehensive immigration and documentation solutions. Our team of licensed professionals offers specialized expertise across a wide array of services, including company formation, trade licenses, and all types of visa processing—encompassing employment, family, investor, and Golden Visas. We also provide essential Tasheel & Labor Services, along with efficient attestation and translation for critical documents.</p>
-                    <p>At Tarheeb, we are dedicated to ensuring a seamless and efficient experience for all our clients. We prioritize complete transparency throughout every process, from visa applications to passport services and document attestation. Our commitment to professional excellence and guaranteed results has made us the preferred choice for individuals and businesses navigating UAE regulatory landscape.</p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-box">
-                            <div class="stat-number" data-target="5000">0</div>
-                            <div class="stat-text">Happy Clients</div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-animation">
+                            <div class="people-group">
+                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user"></i>
+                            </div>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number" data-target="100">0</div>
-                            <div class="stat-text">Success Rate</div>
+                        <div class="stat-text">Happy Clients</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-animation">
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 36 36" class="progress-ring">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" class="progress-fill"/>
+                                </svg>
+                                <div class="progress-text">100%</div>
+                            </div>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number" data-target="24">0</div>
-                            <div class="stat-text">24/7 Support</div>
+                        <div class="stat-text">Success Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-animation">
+                            <div class="clock-animation">
+                                <div class="clock-face">
+                                    <div class="hour-hand"></div>
+                                    <div class="minute-hand"></div>
+                                    <div class="second-hand"></div>
+                                    <div class="center-dot"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number" data-target="25">0</div>
-                            <div class="stat-text">Years Experience</div>
+                        <div class="stat-text">24/7 Support</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-animation">
+                            <div class="trophy-animation">
+                                <i class="fas fa-trophy"></i>
+                                <div class="sparkles">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="stat-text">25+Years of Experience</div>
                     </div>
                 </div>
             </div>
@@ -350,55 +387,68 @@
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="Enter your full name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="Enter your email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Required</label>
-                            <select id="service" required>
-                                <option value="">Select a service</option>
-                                <option value="company-formation">Company Formation</option>
-                                <option value="trade-license">Trade License</option>
-                                <option value="employment-visa">Employment Visa</option>
-                                <option value="family-visa">Family Visa</option>
-                                <option value="investor-visa">Investor Visa</option>
-                                <option value="golden-visa">Golden Visa</option>
-                                <option value="tasheel-labor">Tasheel & Labor Services</option>
-                                <option value="attestation-translation">Attestation & Translation</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your requirements" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+               <div class="contact-form">
+    <h3>Send us a Message</h3>
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7f2821be-c561-4983-9f16-0d87b15f21d5">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="company-formation">Company Formation</option>
+                <option value="trade-license">Trade License</option>
+                <option value="employment-visa">Employment Visa</option>
+                <option value="family-visa">Family Visa</option>
+                <option value="investor-visa">Investor Visa</option>
+                <option value="golden-visa">Golden Visa</option>
+                <option value="tasheel-labor">Tasheel & Labor Services</option>
+                <option value="attestation-translation">Attestation & Translation</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your requirements" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+        <div id="form-result" style="margin-top: 10px; display: none;"></div>
+    </form>
+</div>
+
             </div>
         </div>
     </section>

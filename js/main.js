@@ -1,4 +1,4 @@
-  // Preloader
+          // Preloader
         window.addEventListener('load', function() {
             const preloader = document.getElementById('preloader');
             setTimeout(() => {
@@ -6,6 +6,45 @@
                 preloader.style.visibility = 'hidden';
             }, 1000);
         });
+
+        // Hero video auto-play and loop functionality
+        const heroVideo = document.getElementById('heroVideo');
+        if (heroVideo) {
+            // Ensure video plays and loops continuously
+            heroVideo.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play().catch(function(error) {
+                    console.log('Video play failed:', error);
+                });
+            });
+
+            // Handle video loading and ensure it starts playing
+            heroVideo.addEventListener('loadeddata', function() {
+                this.play().catch(function(error) {
+                    console.log('Video autoplay failed:', error);
+                });
+            });
+
+            // Ensure video continues playing when page becomes visible
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden && heroVideo.paused) {
+                    heroVideo.play().catch(function(error) {
+                        console.log('Video resume failed:', error);
+                    });
+                }
+            });
+
+            // Handle any play interruptions and restart
+            heroVideo.addEventListener('pause', function() {
+                if (!this.ended) {
+                    setTimeout(() => {
+                        this.play().catch(function(error) {
+                            console.log('Video restart failed:', error);
+                        });
+                    }, 100);
+                }
+            });
+        }
 
         // Header scroll effect
         window.addEventListener('scroll', function() {
@@ -247,3 +286,36 @@
         window.addEventListener('scroll', animateOnScroll);
         // Trigger once on load
         window.addEventListener('load', animateOnScroll);
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const result = document.getElementById('form-result');
+    result.style.display = 'block';
+    result.innerHTML = 'Sending...';
+    
+    const formData = new FormData(this);
+    
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await response.json();
+        
+        if (response.status === 200) {
+            result.innerHTML = 'Message sent successfully!';
+            result.style.color = 'green';
+            this.reset();
+        } else {
+            result.innerHTML = data.message || 'Something went wrong!';
+            result.style.color = 'red';
+        }
+    } catch (error) {
+        result.innerHTML = 'Error: Could not send message!';
+        result.style.color = 'red';
+        console.error('Error:', error);
+    }
+    
+    setTimeout(() => {
+        result.style.display = 'none';
+    }, 5000);
+});
