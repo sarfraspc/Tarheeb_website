@@ -223,14 +223,25 @@
             background: linear-gradient(135deg, rgba(10, 25, 47, 0.5) 0%, rgba(10, 25, 47, 0.3) 100%);
         }
         
-        .hero-video {
+        .video-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            overflow: hidden;
             z-index: -1;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 aspect ratio */
+            transform: translate(-50%, -50%);
             filter: brightness(0.9);
         }
         
