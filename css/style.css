@@ -1659,7 +1659,19 @@ footer {
             }
         }
         
+        .mobile-video {
+            display: none;
+        }
+
         @media (max-width: 768px) {
+            .desktop-video {
+                display: none;
+            }
+
+            .mobile-video {
+                display: block;
+            }
+
             .mobile-toggle {
                 display: block;
             }
