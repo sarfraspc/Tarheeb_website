@@ -163,6 +163,10 @@
             transition: transform 0.5s ease;
         }
         
+        .footer-column .logo img {
+            height: 150px;
+        }
+        
         .logo:hover img {
             transform: rotate(5deg);
         }

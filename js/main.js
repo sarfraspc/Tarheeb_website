@@ -49,10 +49,13 @@
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
+            const logo = document.querySelector('.header-container .logo img');
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
+                logo.src = 'img/logo1.png';
             } else {
                 header.classList.remove('scrolled');
+                logo.src = 'img/logo2.png';
             }
             
             // Counting animation
